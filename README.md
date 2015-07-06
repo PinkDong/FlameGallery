@@ -15,7 +15,8 @@ $.fn.flameGallery.defaults = {
 	flameBtn: 					 false,
 	flamePrev: 					'flame-btn-prev',
 	flameNext: 					'flame-btn-next',
-	flameCaption: 				false
+	flameCaption: 				false,
+	flameCaptionTemp: 		false //alt 값으로 제목 호출
 }
 ```
 

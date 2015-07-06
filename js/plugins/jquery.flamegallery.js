@@ -1,12 +1,12 @@
 define([
 	/**
 	 * -----------------------------------------------------------------
+	 * flame-gallery 클래스가 발견되면 자동 실행
 	 * 1. 썸네일에 있는 이미지에 원하는 이벤트가 발생할때 메인에 이미지 삽입
 	 * 2. 자식노드에 바로 img 인 경우 체크
 	 * 3. 키보드 접근시 이벤트 발생 - 이 이벤트는 사용자가 지정한 이벤트와 별개로 움직여야 할것.
 	 *  1) 탭을 눌러서 이동과 동시에 이미지 변경 하게 할것.
 	 *  2) 커서는 이동 했지만 사용자가 엔터를 눌렀을 경우에 이미지가 변경 되게 할것.
-	 * - 이미지가 변경된 후 큰 이미지로 커서가 가야하는지 아니면 안내를 해야하는지?? 궁금!!!
 	 * 좌우 버튼
 	 * 캡션 달기 num / toal
 	 * 캡션 제목 달기
@@ -75,7 +75,7 @@ define([
 					$thum.find(settings.flameslides).eq(i).attr('tabindex', i);
 				}
 				// 키보드 엔터키를 눌렀을 경우 이벤트 발생
-				$thum.on('keydown', function(e){
+				$thum.on('keydown', '.'+settings.flameImgClass, function(e){
 					if( settings.flameslides === '> img'){
 						ev_path = $(this).attr('src');
 					}else{
@@ -99,7 +99,8 @@ define([
 			flameEvent: 				'mouseenter',
 			flameVisualWidth: 			500,
 			flameVisualHeight: 		500,
-			flameCaption: 				false
+			flameCaption: 				false,
+			flameCaptionTemp: 		false
 		}
 	}
 
