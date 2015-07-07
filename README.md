@@ -5,6 +5,7 @@
 ```
 $.fn.flameGallery.defaults = {
 	flameslides: 				'> img',
+	autoSelector: 				'.flame-gallery-show[data-flame-auto-init!=false]',
 	flameImgAcitveClass: 		'flame-image-active',
 	flameImgClass: 				'flame-image',
 	flameMainSelector: 			'flame-main',

@@ -20,7 +20,9 @@ define([
 ], function(){
 	'use strict';
 
-	if(!$.fn.flameGallery){
+	var version = '0.0.1';
+
+	if(!$.fn.flameGallery) {
 		$.fn.flameGallery = function(options){
 
 			var settings = $.extend({}, $.fn.flameGallery.defaults, options);
@@ -92,6 +94,7 @@ define([
 
 		$.fn.flameGallery.defaults = {
 			flameslides: 				'> img',
+			autoSelector: 				'.flame-gallery-show[data-flame-auto-init!=false]',
 			flameImgAcitveClass: 		'flame-image-active',
 			flameImgClass: 			'flame-image',
 			flameMainSelector: 		'flame-main',
